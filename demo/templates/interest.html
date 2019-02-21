@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interest Calculation</title>
+</head>
+<body>
+
+<h1>Interest Calculation</h1>
+<form method="post">
+    {% csrf_token %}
+    Amount <br/>
+    <input type="number" name="amount" value="{{amount}}" />
+    <p/>
+    Period <br/>
+    <select name="period">
+        <option value="12" {% if period == 12 %} selected {% endif %} >12 Months</option>
+        <option value="24" {% if period == 24 %} selected {% endif %}>24 Months</option>
+        <option value="36" {% if period == 36 %} selected {% endif %}>36 Months</option>
+    </select>
+    <p/>
+    <input type="submit" value="Calculate" />
+    <p/>
+    {% if interest %}
+    <h3>Interest = {{interest}} </h3>
+    {% endif %}
+</form>
+
+</body>
+</html>
