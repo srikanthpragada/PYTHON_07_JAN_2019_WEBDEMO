@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interest Calculation With Form</title>
+</head>
+<body>
+
+<h1>Interest Calculation</h1>
+<form method="post">
+    {% csrf_token %}
+    <table>
+        {{form}}
+    </table>
+    <p/>
+    <input type="submit" value="Calculate" />
+</form>
+
+{{interest}}
+
+</body>
+</html>

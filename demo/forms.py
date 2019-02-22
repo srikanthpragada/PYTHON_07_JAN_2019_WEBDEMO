@@ -2,5 +2,5 @@ import django.forms as forms
 
 
 class InterestForm(forms.Form):
-    amount = forms.IntegerField()
-    period = forms.IntegerField()
+    amount = forms.IntegerField(label="Deposit Amount")
+    period = forms.IntegerField(label="Deposit Period(Months)")
