@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Title</title>
-</head>
-<body>
-
+{% extends "master.html" %}
+{% block content %}
 <h1>Add Title</h1>
 <form method="post">
     {% csrf_token %}
@@ -18,5 +12,4 @@
 
 {{message}}
 
-</body>
-</html>
+{% endblock %}
