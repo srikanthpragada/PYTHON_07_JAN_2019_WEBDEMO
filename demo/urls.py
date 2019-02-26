@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from . import views, hr_views,db_views
+from . import views, hr_views,db_views, ajax_views
 
 urlpatterns = [
    path("welcome/", views.welcome),
@@ -12,5 +12,7 @@ urlpatterns = [
    path("listjobs/", hr_views.list_jobs),
    path("addtitle/", db_views.add_title),
    path("titles/", db_views.list_titles),
+   path("ajaxdemo/", ajax_views.ajax_demo),
+   path("datetime/", ajax_views.date_time),
 
 ]
